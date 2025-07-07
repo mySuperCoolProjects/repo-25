@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  display: flex;
+  min-height: 100dvh;
+  background-color: black;
+  background-image: url('assets/fondo.avif');
+  background-position: center;
+  background-size: cover;
+
+  .inner {
+    z-index: 9999;
+    mix-blend-mode: overlay;
+    inset: 0;
+    position: absolute;
+    animation: moveInner 10s ease infinite alternate;
+  }
+}
+
+@keyframes moveInner {
+  0% {
+    background-color: #f0f;
+  }
+
+  25% {
+    background-color: #0f0;
+  }
+
+  50% {
+    background-color: #00f;
+  }
+
+  75% {
+    background-color: #f00;
+  }
+
+  100% {
+    background-color: #ff0;
+  }
+}
